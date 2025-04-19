@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>گالری تصاویر سعدی</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Vazirmatn', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #0b2c2d;
+      color: white;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #ffd700;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+
+    /* لایت‌باکس */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox::after {
+      content: "برای بستن کلیک کنید";
+      position: absolute;
+      bottom: 20px;
+      color: #ccc;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+      background: #134647;
+      color: #ddd;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📷 گالری تصاویر سعدی</h1>
+
+  <div class="gallery-grid">
+    <img src=".//2025-04-17 11.33.17.jpg" alt="سعدیه ۱" />
+    <!-- <img src=".//2025-04-17 11.34.07.jpg" alt="خطی سعدی" /> -->
+    <!-- <img src=".//2025-04-17 11.33.07.jpg" alt="مجسمه سعدی" /> -->
+    <img src=".//photo_2025-04-19 09.29.04.jpeg" alt="">
+    <img src=".//photo_2025-04-19 09.29.13.jpeg" alt="">
+    <img src=".//photo_2025-04-19 09.29.16.jpeg" alt="">
+    <img src=".//photo_2025-04-19 09.29.22.jpeg" alt="">
+    <img src=".//photo_2025-04-19 09.29.25.jpeg" alt="">
+    <img src=".//photo_2025-04-19 09.29.27.jpeg" alt="">
+    <img src=".//photo_2025-04-19 09.29.31.jpeg" alt="">
+    <img src=".//photo_2025-04-19 09.29.34.jpeg" alt="">
+    <img src=".//photo_2025-04-19 09.29.37.jpeg" alt="">
+    <img src=".//photo_2025-04-19 09.34.58.jpeg" alt="">
+    <img src=".//photo_2025-04-19 09.35.02.jpeg" alt="">
+    <!-- <img src=".//photo_2025-04-19 09.35.02.jpeg" alt=""> -->
+    <!-- <img src=".//Screenshot_۲۰۲۵۰۴۱۷-۱۲۳۱۰۳_Pinterest (1).jpg" alt=""> -->
+    <!-- <img src=".//Screenshot_۲۰۲۵۰۴۱۷-۱۲۳۱۰۳_Pinterest.jpg" alt=""> -->
+    <!-- <img src=".//Screenshot_۲۰۲۵۰۴۱۷-۱۲۳۲۰۴_Pinterest.jpg" alt=""> -->
+    <img src=".//Screenshot_۲۰۲۵۰۴۱۷-۱۲۳۳۲۱_Pinterest.jpg" alt="">
+    <!-- عکس‌های بیشتر را به همین سبک اضافه کن -->
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="تصویر بزرگ" />
+  </div>
+<!--salam-->
+  <footer>
+    <p>📧 info@saadiproject.ir | 🖼 @saadiproject</p>
+    <p>تمامی حقوق برای پروژه بزرگداشت سعدی محفوظ است</p>
+  </footer>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+
+    document.querySelectorAll('.gallery-grid img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('active');
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+      lightboxImg.src = '';
+    });
+  </script>
+
+</body>
+</html>

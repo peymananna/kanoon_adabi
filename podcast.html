@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>پادکست‌های سعدی</title>
+  <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Vazir', sans-serif;
+      background-color: #0b2c2d;
+      color: #fff;
+      background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/persian.png');
+      background-size: contain;
+      background-repeat: repeat;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 50px 20px 20px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .title {
+      font-size: 40px;
+      color: #ffd700;
+      margin-bottom: 10px;
+      animation: fadeInDown 1.2s ease-out;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #ccc;
+      font-style: italic;
+      animation: fadeIn 1.8s ease-in;
+    }
+
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .podcast-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 30px;
+    }
+
+    .podcast-card {
+      width: 300px;
+      /* background-color: d6ce93; */
+      background: linear-gradient(to bottom right, rgba(0, 255, 200, 0.07), rgba(0, 100, 50, 0.08));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .podcast-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(255, 215, 0, 0.3);
+    }
+
+    .podcast-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .play-icon {
+      position: absolute;
+      top: 40%;
+      left: 45%;
+      font-size: 40px;
+      color: #ffd700;
+      opacity: 0.8;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .podcast-card:hover .play-icon {
+      transform: scale(1.2);
+    }
+
+    .podcast-content {
+      padding: 20px;
+    }
+
+    .podcast-title {
+      font-size: 20px;
+      color: #ffd700;
+      margin-bottom: 10px;
+    }
+
+    .podcast-meta {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .audio-player {
+      width: 100%;
+      outline: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.4);
+      margin-top: 40px;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .podcast-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 20px;
+        gap: 20px;
+        scroll-snap-type: x mandatory;
+      }
+
+      .podcast-card {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        /* background-color: d6ce93; */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="title">پادکست‌های سعدی</h1>
+    <div class="subtitle">به نوای سخن سعدی گوش جان بسپارید...</div>
+  </header>
+
+  <section class="podcast-container">
+    <div class="podcast-card">
+      <img src=".//IMAGE 2025-04-19 13:11:38.jpg" alt="Podcast 1" class="podcast-img" />
+      <div class="play-icon">▶</div>
+      <div class="podcast-content">
+        <div class="podcast-title">بزرگداشت سعدی</div>
+        <div class="podcast-meta">گویندگان : محمد رایین حمام چی و ایلیا اصعدی و نگار رحمتی و یکتا عابدینی و آریانا محمد علی زاده و سامان هاشمی | مدت: ۱۸ دقیقه</div>
+        <audio class="audio-player" controls>
+          <source src=".//saadi2.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+    </div>
+
+    <!-- <div class="podcast-card">
+      <img src=".//2025-04-17 11.33.17.jpg" alt="Podcast 2" class="podcast-img" />
+      <div class="play-icon">▶</div>
+      <div class="podcast-content">
+        <div class="podcast-title">آواز اندیشه</div>
+        <div class="podcast-meta">گوینده: رضا کشاورز | مدت: ۱۶ دقیقه</div>
+        <audio class="audio-player" controls>
+          <source src="your-audio-2.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+    </div> -->
+
+    <!-- <div class="podcast-card">
+      <img src=".//2025-04-17 11.33.17.jpg" alt="Podcast 3" class="podcast-img" />
+      <div class="play-icon">▶</div>
+      <div class="podcast-content">
+        <div class="podcast-title">شب‌های شیراز</div>
+        <div class="podcast-meta">گوینده: نگار سلطانی | مدت: ۹ دقیقه</div>
+        <audio class="audio-player" controls>
+          <source src="your-audio-3.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+    </div> -->
+  </section>
+
+  <footer>
+    © بزرگداشت سعدی | طراحی با عشق برای فرهنگ ایرانی 🌿
+  </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>پروژه بزرگداشت سعدی</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --dark: #0b2c2d;
+      --glass: rgba(255, 255, 255, 0.08);
+      --gold: #ffd700;
+      --light-text: #eee;
+      --hover-glow: rgba(255, 215, 0, 0.3);
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Vazirmatn', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--dark);
+      color: var(--light-text);
+      padding: 0;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .title {
+      text-align: center;
+      padding: 2.5rem 1rem 1.5rem;
+      font-size: 2.4rem;
+      font-weight: bold;
+      background: linear-gradient(to right, #143f3f, #0f2c2d);
+      color: var(--gold);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #134646;
+      padding: 1rem;
+      gap: 2rem;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+    }
+
+    nav a {
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      color: white;
+      text-shadow: 0 0 5px var(--gold);
+    }
+
+    .container {
+      padding: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--gold);
+    }
+
+    .section-title i {
+      background: var(--gold);
+      color: #333;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      text-align: center;
+      line-height: 24px;
+      font-weight: bold;
+    }
+
+    .responsive-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .news-card-link {
+      text-decoration: none;
+      color: inherit;
+      min-width: 280px;
+      max-width: 360px;
+      background: var(--glass);
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      padding: 1rem;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      display: block;
+      border: 1px solid rgba(255, 215, 0, 0.2);
+    }
+
+    .news-card-link img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 0.7rem;
+    }
+
+    .news-card-link h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.4rem;
+      color: var(--gold);
+    }
+
+    .news-card-link p {
+      font-size: 0.96rem;
+      color: var(--light-text);
+      line-height: 1.6;
+    }
+
+    .news-card-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px var(--hover-glow);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #0a1f1f;
+      color: #aaa;
+      font-size: 0.95rem;
+      margin-top: 4rem;
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-shadow: 0 0 5px var(--gold);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .news-card-link {
+        min-width: 90%;
+      }
+
+      .title {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="title">پروژه بزرگداشت سعدی</div>
+
+  <nav>
+    <a href=".//podcast.html">🎧 پادکست‌ها</a>
+    <a href=".//gallery.html">🖼 گالری تصاویر</a>
+  </nav>
+
+  <main class="container">
+
+    <!-- 🔥 اخبار و مقالات -->
+    <h2 class="section-title"><i>📰</i> اخبار و مقالات</h2>
+    <div class="responsive-cards">
+      <a href="https://fa.wikipedia.org/wiki/%D8%B3%D8%B9%D8%AF%DB%8C" class="news-card-link">
+        <img src=".//500px-Sadi_in_a_Rose_garden.jpg" alt="مراسم سعدی" />
+        <h3>سعدی شاعر و نویسنده ایرانی</h3>
+        <p>سعدی، شاعر خرد و محبت، آموزگار جاودانه‌ی انسانیت است که با کلامی شیرین، عشق، اخلاق و حکمت را در دل واژه‌ها جا داده است.</p>
+      </a>
+
+      <a href="https://vista.ir/w/a/16/62kka" class="news-card-link">
+        <img src=".//62kka1.jpeg" alt="گلستان سعدی" />
+        <h3>داستانی از کودکی سعدی</h3>
+        <p>روزی سعدی که کودک خردسالی بود، در دکان پدرش ماند تا او برای نماز به مسجد برود.
+
+            مرد شیادی به مغازه مراجعه کرد و به سعدی گفت:
+            
+            ـ اگر انگشتری را که بر دست داری به من بدهی، یک سیر خرمای شیرین به تو خواهم داد.
+            
+            سعدی به سادگی انگشتر را از انگشت خود بیرون آورد و به مرد شیاد داد.
+            
+            وقتی پدرش برگشت و ماجرا را فهمید ...</p>
+      </a>
+
+      <a href="https://civilica.com/doc/1760450/?utm_source=chatgpt.com/" class="news-card-link">
+        <img src=".//image.png" alt="مجسمه سعدی" />
+        <h3>سعدی شیرازی؛ شاعر اخلاق و عرفان
+        </h3>
+        <p>این مقاله به بررسی زندگی، آثار و ویژگی‌های ادبی سعدی شیرازی می‌پردازد. نویسنده با تحلیل اشعار سعدی، به نقش او در ترویج اخلاق و عرفان در ادبیات فارسی اشاره می‌کند. همچنین، تأثیر سعدی بر شاعران پس از خود و جایگاه او در تاریخ ادبیات ایران مورد بررسی قرار گرفته است.</p>
+      </a>
+    </div>
+
+    <!-- 📢 اطلاعیه‌ها -->
+    <h2 class="section-title"><i>📢</i> اطلاعیه‌ها</h2>
+    <!-- <div class="responsive-cards">
+      <a href="notice1.html" class="news-card-link">
+        <img src="https://cdn.pixabay.com/photo/2016/10/18/08/34/notice-1749656_960_720.png" alt="تمدید مهلت" />
+        <h3>تمدید مهلت ارسال آثار</h3>
+        <p>مهلت ارسال آثار هنری مرتبط با سعدی تا ۱۰ اردیبهشت تمدید شد.</p>
+      </a>  -->
+
+      <a href="notice2.html" class="news-card-link">
+        <img src=".//Negar_1745004782260 (1).png" alt="جایزه سعدی" />
+        <h3>اعطای جایزه ویژه ادبی</h3>
+        <p>به سه اثر برتر ادبی در حوزه سعدی جوایز نفیسی اهدا خواهد شد.</p>
+      </a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>📧 ایمیل: <a href="mailto:info@saadiproject.ir">info@saadiproject.ir</a></p>
+    <p>📷 اینستاگرام: <a href="https://instagram.com/saadiproject" target="_blank">@saadiproject</a></p>
+    <p>© تمامی حقوق محفوظ است - پروژه بزرگداشت سعدی</p>
+  </footer>
+
+</body>
+</html>
